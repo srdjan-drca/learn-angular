@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface PeriodicElement {
-    name: string;
     position: number;
+    name: string;
     weight: number;
     symbol: string;
   }
@@ -30,6 +30,7 @@ export class TestTableComponent implements OnInit {
   constructor() { }
 
   dataSource = elementData;
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
 
   ngOnInit(): void {
   }
